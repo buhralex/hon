@@ -64,8 +64,8 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:water",
         ),
         SensorEntityDescription(
-            key="startProgram.weight",
-            name="Suggested weight",
+            key="actualWeight",
+            name="Actual weight",
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
@@ -93,6 +93,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:speedometer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="startProgram.weight",
+            name="Suggested weight",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            icon="mdi:weight-kilogram",
         ),
     ),
     "TD": (
